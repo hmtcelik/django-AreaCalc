@@ -6,4 +6,5 @@ class HomePageView(TemplateView):
     template_name = "homepage.html"
     
 class SphereView(TemplateView):
-    template_name=
+    model = Sphere
+    template_name= "sphere.html"

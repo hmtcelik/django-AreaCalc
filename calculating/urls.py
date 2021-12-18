@@ -11,8 +11,9 @@
 """
 from django.urls import path
 from . import views
-from calculating.views import HomePageView
+from calculating.views import HomePageView, SphereView
 
 urlpatterns = [
-    path('', HomePageView.as_view(), name='index')
+    path('', HomePageView.as_view(), name='index'),
+    path("sphere/", SphereView.as_view(), name="sphere"),
 ]
