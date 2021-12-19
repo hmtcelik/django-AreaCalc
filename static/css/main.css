@@ -45,6 +45,7 @@ p {
 /*
  *  Reset bootstrap's default style
  */
+ 
 .form-control::-webkit-input-placeholder,
 ::-webkit-input-placeholder {
   opacity: 1;

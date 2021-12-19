@@ -1,27 +1,27 @@
 from django.db import models
 
 class Sphere(models.Model):
-    radius = models.FloatField(default=0)
-    pi = models.FloatField(default=3.14)
+    radius = models.DecimalField(default=0, max_digits=20, decimal_places=10)
+    pi = models.DecimalField(default=3.14, max_digits=20, decimal_places=10)
 
 class Cylinder(models.Model):
-    radius = models.FloatField(default=0)
-    pi = models.FloatField(default=3.14)
-    h = models.FloatField(default=0)
+    radius = models.FloatField(default=0, max_length=30)
+    pi = models.FloatField(default=3.14, max_length=20)
+    h = models.FloatField(default=0, max_length=30)
     
 class Cone(models.Model):
-    radius = models.FloatField(default=0)
-    pi = models.FloatField(default=3.14)
-    h = models.FloatField(default=0)
-    s = models.FloatField(default=0)
+    radius = models.FloatField(default=0, max_length=30)
+    pi = models.FloatField(default=3.14, max_length=20)
+    h = models.FloatField(default=0, max_length=30)
+    s = models.FloatField(default=0, max_length=30)
 
 class RectangularPrism(models.Model):
-    h = models.FloatField(default=0)
-    w = models.FloatField(default=0)
-    l = models.FloatField(default=0)
+    h = models.FloatField(default=0, max_length=30)
+    w = models.FloatField(default=0, max_length=30)
+    l = models.FloatField(default=0, max_length=30)
     
 class TriangularPrism(models.Model):
-    b = models.FloatField(default=0)
-    h = models.FloatField(default=0)
-    l = models.FloatField(default=0)
-    s = models.FloatField(default=0)
+    b = models.FloatField(default=0, max_length=30)
+    h = models.FloatField(default=0, max_length=30)
+    l = models.FloatField(default=0, max_length=30)
+    s = models.FloatField(default=0, max_length=30)
