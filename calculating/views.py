@@ -11,5 +11,6 @@ class HomePageView(TemplateView):
   #  template_name= "sphere.html"
 
 def CalcSphere(request):
+    model = Sphere
     form = SphereForm()
     return render(request, 'sphere.html', {'form': form})

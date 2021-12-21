@@ -8,3 +8,4 @@ class SphereForm(forms.ModelForm):
         model = Sphere
         fields = ('radius','pi',)
         
+        
