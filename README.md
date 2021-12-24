@@ -1,4 +1,4 @@
 # (IN PROCESS)
-## Area and Perimeter Calculation with Django Website
+## Area and Volume Calculation with Django Website
 
-This site can calculation area and perimeter some 3D objects
+This site can calculation area and volume some 3D objects
