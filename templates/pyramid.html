@@ -4,7 +4,7 @@
     <!-- meta charset -->
     <meta charset="utf-8">
     <!-- site title -->
-    <title>Sphere</title>
+    <title>Pyramid</title>
     <!-- meta descr iption -->
     <meta name="description" content="">
     <!-- mobile viwport meta -->
@@ -33,13 +33,12 @@
             <div class="container">
                 <div class="row">
                     <div class="text-center">
-                        <img src="{% static 'img/sphere-r.png' %}" width="20%" height="auto"alt="Sphere">
+                        <img src="{% static 'img/pyramid-r.png' %}" width="30%" height="auto"alt="Cone">
                     </div>
                 </div>
                 <br><br>
                 <div class="row">
-                        <div class="text-center">
-                                                 
+                        <div class="text-center">                
                             <form method="POST" class="post-form">{% csrf_token %} 
                                 {{ form.as_p }}
                                 <button type="submit" class="save btn btn-default">Submit</button>
@@ -51,7 +50,8 @@
                         </div>
                 </div> <!-- /.row -->
             </div> <!-- /.container -->
-            
+            <!-- /.container -->
+           
             <nav style="position: absolute; bottom: 0; width: 100%; font-size: 13px;"class="footer">
                 <div class="container">
                     <div class="text-center">
@@ -60,9 +60,8 @@
                 </div>
                 <!-- /.page-nav -->
             </nav>
-
+            
         </div> <!-- /.pt-tablecell -->
     </div> <!-- /.pt-table -->
-    
 </main> <!-- /.site-wrapper -->
 

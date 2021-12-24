@@ -4,7 +4,7 @@
     <!-- meta charset -->
     <meta charset="utf-8">
     <!-- site title -->
-    <title>Sphere</title>
+    <title>Triangular Prism</title>
     <!-- meta descr iption -->
     <meta name="description" content="">
     <!-- mobile viwport meta -->
@@ -29,29 +29,35 @@
             <!-- .close -->
             <a href="{% url 'index' %}" class="page-close"><i class="tf-ion-close"></i></a>
             <!-- /.close -->
-            
+            <br>
             <div class="container">
+                <div class="row"><br>
+                    <div class="text-center">
+                        <img src="{% static 'img/triangular-r.jpg' %}" width="30%" height="auto"alt="Triangular">
+                    </div>
+                </div>
+                <br><br>
                 <div class="row">
-                        <div class="text-center">
+                        <div class="text-center">                
                             <form method="POST" class="post-form">{% csrf_token %} 
                                 {{ form.as_p }}
-                                <button type="submit" class="save btn btn-default">Submit</button>     
+                                <button type="submit" class="save btn btn-default">Submit</button>
+                                <br><br><br>
+                                <h3>Surface Area: {{ area }}</h3>
+                                <br>
+                                <h3>Volume: {{ volume }}</h3><br>
                             </form>
-                            <h4>Area = {{ sphere.area }}</h4>
                         </div>
                 </div> <!-- /.row -->
             </div> <!-- /.container -->
-
-            <nav class="page-nav clear">
+            <nav style="position: absolute; bottom: 0; width: 100%; font-size: 13px;"class="footer">
                 <div class="container">
                     <div class="text-center">
-                        <span class="copyright hidden-xs">Copyright &copy; 2016 Phantom, All Rights Reserved.</span>
+                        Github Username: @hmtcelik
                     </div>
                 </div>
                 <!-- /.page-nav -->
             </nav>
-            <!-- /.container -->
-
         </div> <!-- /.pt-tablecell -->
     </div> <!-- /.pt-table -->
 </main> <!-- /.site-wrapper -->

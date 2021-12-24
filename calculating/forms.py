@@ -1,35 +1,42 @@
 from django import forms
-from .models import Sphere, Cylinder, Cone, RectangularPrism, TriangularPrism
 
 
-class SphereForm(forms.ModelForm):
-    
-    class Meta:
-        model = Sphere
-        fields = ('radius','pi',)
+class SphereForm(forms.Form):
         
-class CylinderForm(forms.ModelForm):
-    
-    class Meta:
-        model = Cylinder
-        fields = ('radius','pi','h',)
+    r = forms.DecimalField(max_digits=20, decimal_places=10, initial=0, required=False)
+    pi = forms.DecimalField(max_digits=20, decimal_places=10, initial=3.14, required=False)
+   
+class CylinderForm(forms.Form):
+        
+    r = forms.DecimalField(max_digits=20, decimal_places=10, initial=0, required=False)
+    h = forms.DecimalField(max_digits=20, decimal_places=10, initial=0, required=False)
+    pi = forms.DecimalField(max_digits=20, decimal_places=10, initial=3.14, required=False)
 
-class ConeForm(forms.ModelForm):
     
-    class Meta:
-        model = Cone
-        fields = ('radius','pi','h','s',)
+class ConeForm(forms.Form):
         
-class RectangularForm(forms.ModelForm):
+    r = forms.DecimalField(max_digits=20, decimal_places=10, initial=0, required=False)
+    s = forms.DecimalField(max_digits=20, decimal_places=10, initial=0, required=False)
+    h = forms.DecimalField(max_digits=20, decimal_places=10, initial=0, required=False)
+    pi = forms.DecimalField(max_digits=20, decimal_places=10, initial=3.14, required=False)
+   
+class RectangularForm(forms.Form):
+        
+    l = forms.DecimalField(max_digits=20, decimal_places=10, initial=0, required=False)
+    w = forms.DecimalField(max_digits=20, decimal_places=10, initial=0, required=False)
+    h = forms.DecimalField(max_digits=20, decimal_places=10, initial=0, required=False)
+   
+class TriangularForm(forms.Form):
+        
+    l = forms.DecimalField(max_digits=20, decimal_places=10, initial=0, required=False)
+    s = forms.DecimalField(max_digits=20, decimal_places=10, initial=0, required=False)
+    b = forms.DecimalField(max_digits=20, decimal_places=10, initial=0, required=False)
+    h = forms.DecimalField(max_digits=20, decimal_places=10, initial=0, required=False)
     
-    class Meta:
-        model = RectangularPrism
-        fields = ('h','w','l',)
+class PyramidForm(forms.Form):
         
-class TriangularForm(forms.ModelForm):
-    
-    class Meta:
-        model = TriangularPrism
-        fields = ('b','h','l','s',)
-        
+    b = forms.DecimalField(max_digits=20, decimal_places=10, initial=0, required=False)
+    s = forms.DecimalField(max_digits=20, decimal_places=10, initial=0, required=False)
+    h = forms.DecimalField(max_digits=20, decimal_places=10, initial=0, required=False)
+   
         

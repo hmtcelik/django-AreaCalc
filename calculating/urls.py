@@ -11,14 +11,15 @@
 """
 from django.urls import path
 from . import views
-from .views import HomePageView, CalcSphere, Cylinder, Cone, Rectangular, Triangular
+from .views import HomePageView, SphereCalc, CylinderCalc, ConeCalc, RectangularCalc, TriangularCalc, ContactView, PyramidCalc
 
 urlpatterns = [
     path('', HomePageView.as_view(), name='index'),
-    #path("sphere/", SphereView.as_view(), name="sphere"),
-    path("sphere/", views.CalcSphere, name="sphere"),
-    path("cylinder/", views.Cylinder, name="cylinder"),
-    path("cone/", views.Cone, name="cone"),
-    path("rectangular/", views.Rectangular, name="rectangular"),
-    path("triangular/", views.Triangular, name="triangular"),
+    path("sphere/", views.SphereCalc.as_view(), name="sphere"),
+    path("cylinder/", views.CylinderCalc.as_view(), name="cylinder"),
+    path("cone/", views.ConeCalc.as_view(), name="cone"),
+    path("rectangular/", views.RectangularCalc.as_view(), name="rectangular"),   
+    path("triangular/", views.TriangularCalc.as_view(), name="triangular"),
+    path("pyramid/", views.PyramidCalc.as_view(), name="pyramid"),
+    path("contact/", views.ContactView.as_view(), name="contact"),
     ]
