@@ -1,4 +1,4 @@
-# Area and Volume Calculation with Django Website
+# Area and Volume Calculation with Django
 
 - This website can calculation area and volume some 3D objects
 - Django version: 3.2.9
